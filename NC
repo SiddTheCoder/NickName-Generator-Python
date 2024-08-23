@@ -1,0 +1,41 @@
+import random
+
+preWords = [
+    "Captain", "Turbo", "Noodle", "Snazzy", "Sparkle", "Wiggle", "Fuzzy", "Bubbles", "Whiskers", "Sizzle", "Wobble", "Giggles",
+    "Squishy", "Zippy", "Doodle", "Snickers", "Fluffy", "Blinky", "Quirky", "Jelly", "Puffy", "Twinkle", "Froggy", "Muffin", 
+    "Bouncy", "Puddle", "Squeezy", "Whisk", "Dizzy", "Sprout", "Wobble", "Jolly", "Pip", "Tater", "Scooter", "Snickerdoodle",
+    "Funky", "Doodlebug", "Crinkle", "Zappy", "Goofy", "Chirpy", "Puddles", "Skippy", "Pookie", "Chuckle", "Wiggly", "Fiddle",
+    "Fizz", "Waffles", "Mugsy", "Gizmo", "Binky", "Squiggles", "Twinky", "Wacky", "Toodles", "Wizzle", "Plucky", "Squirt",
+    "Peewee", "Flopsy", "Dinky", "Zonk", "Snuffy", "Whisk", "Tinker", "Snazzy", "Flapjack", "Boomer", "Wobbles", "Jumble",
+    "Sprinkles", "Chubby", "Pip", "Nugget", "Nifty", "Snicker", "Whisk", "Snazzy", "Spritz", "Bamboozle", "Tiddly", "Fluffernutter",
+    "Blinky", "Poodles", "Wiggly", "Noodle", "Jellybean", "Moppet", "Flipper", "Skedaddle", "Zippy", "Wobbly", "Quackers",
+    "Doodle", "Frolic", "Muffin", "Sprout", "Jumble", "Nifty", "Bumpy", "Chuckle", "Jiggly", "Zizzle", "Scooter", "Fizzy",
+    "Twinkle", "Squish", "Rascal", "Jiffy", "Sprinkle", "Doodles", "Plucky", "Wobble", "Twist", "Bumpy", "Pip", "Fuzzy",
+    "Giggle", "Bop", "Snappy", "Pip", "Puddles", "Noodle", "Wobble", "Zappy", "Chirpy", "Wacky", "Scooter", "Snickers",
+    "Dizzy", "Squirt", "Peewee", "Crinkle", "Twizzle", "Mugsy", "Squeezy", "Wiggle", "Snuggle", "Flopsy", "Fluffy",
+    "Sprout", "Wobbly", "Squiggles", "Bouncy", "Pip", "Jelly", "Bingo", "Toodles", "Chuckle", "Sprout", "Wiggly",
+    "Giggles", "Zing", "Plucky", "Muffin", "Pip", "Scooter", "Flapjack", "Twinkle", "Chirpy", "Nugget", "Snappy",
+    "Blinky", "Fizz", "Noodle", "Whisk", "Squirt", "Twist", "Dizzy", "Wobble", "Snickers", "Sprinkles", "Mugsy", "Snazzy",
+    "Giggles", "Quirky", "Wacky", "Doodle", "Nifty", "Bumpy", "Squishy", "Snicker", "Sprout", "Frolic", "Jellybean",
+    "Waffles", "Spritz", "Twizzle", "Wobbly", "Fluffy", "Zappy", "Toodles", "Jelly", "Wobbles", "Squirt", "Plucky",
+    "Scooter", "Fizz", "Snuggle", "Sprinkle", "Doodles", "Pip", "Wiggle", "Snickers", "Puddles", "Squirt", "Wobbly",
+    "Crinkle", "Mugsy", "Twinkle", "Giggles", "Snazzy", "Sprout", "Fluffy", "Wiggly", "Scooter", "Dizzy", "Plucky",
+    "Whisk", "Blinky", "Snuggle", "Sprinkles", "Twist", "Chirpy", "Jellybean", "Fizz", "Pip", "Twizzle", "Snickers",
+    "Spritz", "Wobbly", "Squiggles", "Giggles", "Wacky", "Muffin", "Wobble", "Sprout", "Bouncy", "Noodle", "Doodle",
+    "Scooter", "Squishy", "Pip", "Twizzle", "Fluffy", "Snickers", "Giggles", "Plucky", "Wobbles", "Wobbly", "Chuckle",
+    "Nifty", "Sprinkles", "Sprout", "Bumpy", "Puddles", "Twinkle", "Wiggle", "Jelly", "Snazzy", "Scooter", "Pip",
+    "Squirt", "Whisk", "Spritz", "Wobbly", "Mugsy", "Giggles", "Twist", "Wobbles", "Fluffy", "Jellybean", "Snickers",
+    "Sprout", "Toodles", "Bingo", "Sprinkle", "Wiggly", "Scooter", "Twizzle", "Wobble", "Crinkle", "Chirpy", "Pip",
+    "Fizz", "Snuggle", "Dizzy", "Muffin", "Squiggles", "Nifty", "Twinkle", "Sprout", "Spritz", "Plucky", "Giggles",
+    "Wobbly", "Squirt", "Sprinkles", "Fluffy", "Snickers", "Wiggle", "Twizzle", "Jellybean", "Scooter", "Sprout",
+    "Doodles", "Snazzy", "Wobble", "Pip", "Wobbly", "Twinkle", "Chirpy", "Jelly", "Wacky", "Muffin", "Squishy",
+    "Giggles", "Sprout", "Snickers", "Twist", "Plucky", "Sprinkles", "Wobble", "Twizzle", "Crinkle", "Fizz", "Snuggle",
+    "Dizzy", "Sprout", "Wobbles", "Giggles", "Jelly", "Scooter", "Noodle", "Wiggle", "Twinkle", "Spritz", "Sprout",
+    "Chirpy", "Fluffy", "Wacky", "Twizzle", "Pip", "Snick" ]
+
+
+userName = input("Names - ")
+userWords = userName.split(" ")
+
+for words in userWords:
+  print(words+preWords[random.randint(0, len(preWords)-1)])
